@@ -42,12 +42,12 @@ LATESTARTSERVICE=false
 
 # Construct your list in the following format
 # This is an example
-REPLACE_EXAMPLE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
-"
+# REPLACE_EXAMPLE="
+# /system/app/Youtube
+# /system/priv-app/SystemUI
+# /system/priv-app/Settings
+# /system/framework
+# "
 
 # Construct your own list here
 REPLACE="
@@ -123,7 +123,7 @@ REPLACE="
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "        OGG PLAYBACK FIX       "
   ui_print "*******************************"
 }
 
@@ -134,6 +134,7 @@ on_install() {
   # Extend/change the logic to whatever you want
   ui_print "- Extracting module files"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
+  cp "$MODPATH/vendor/etc/audio_policy_configuration.xml" "/vendor/etc/audio_policy_configuration.xml"
 }
 
 # Only some special files require specific permissions

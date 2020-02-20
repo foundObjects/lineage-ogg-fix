@@ -1,6 +1,6 @@
-id=template
-name=Template Module
+id=lineageOggFix
+name=LineageOS Ogg Vorbis Playback Fix
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=katzenpapst
+description=Attempts to fix broken ogg playback under LineageOS
